@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+body {
+  font-family: 'Google Sans', Arial, sans-serif;
+  color: var(--foreground);
+  margin: 0;
+  padding: 0;
+  background: var(--background);
+  line-height: 1.6;
+}
+
+.font-sora {
+  font-family: 'Sora', 'Inter', 'Poppins', sans-serif;
+}

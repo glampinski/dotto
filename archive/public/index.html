@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dotto</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="#home" class="logo">
+        <img src="Dotto_icon_transparent_background.png" alt="Dotto Logo" class="logo-img">
+        <span class="logo-text">Dotto</span>
+      </a>
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#nano">Nano</a></li>
+        <li><a href="#ultra">Ultra</a></li>
+        <li><a href="#bigdata">Big data</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main class="main-content">
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Empowering Your Data Journey</h1>
+        <p>dotto is your trusted partner for advanced data solutions, from nano to big data. We help you monitor, analyze, and optimize your resources for a sustainable future.</p>
+        <a href="#contact" class="cta-btn">Contact Us</a>
+      </div>
+      <div class="hero-image">
+  <img src="Dotto_nano_inside.png" alt="Dotto Nano Product" />
+      </div>
+    </section>
+    <section class="features">
+      <div class="feature-item">
+        <div class="feature-image-box">
+          <img src="Dotto_box_white.png" alt="Nano" />
+        </div>
+        <div class="feature-text">
+          <h2>Nano</h2>
+          <p>Precision monitoring for the smallest details. Ideal for IoT and micro-environments.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-image-box">
+          <img src="Dotto_box_white.png" alt="Ultra" />
+        </div>
+        <div class="feature-text">
+          <h2>Ultra</h2>
+          <p>Advanced analytics for ultra-fast insights and decision making.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-image-box">
+          <img src="Dotto_box_white.png" alt="Big Data" />
+        </div>
+        <div class="feature-text">
+          <h2>Big Data</h2>
+          <p>Scalable solutions for massive data sets and enterprise needs.</p>
+        </div>
+      </div>
+    </section>
+    <section class="about">
+      <h2>About dotto</h2>
+      <p>Inspired by the best in sustainable technology, dotto delivers reliable, innovative, and eco-friendly data solutions. Our mission is to empower organizations to make smarter, greener choices.</p>
+    </section>
+    <footer class="footer">
+      <div class="footer-content">
+        <span>&copy; 2025 dotto. All rights reserved.</span>
+        <a href="#contact">Contact</a>
+      </div>
+    </footer>
+  </main>
+  <script>
+    // Mobile menu toggle functionality
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    mobileMenuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      mobileMenuToggle.classList.toggle('active');
+    });
+    
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        mobileMenuToggle.classList.remove('active');
+      });
+    });
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.navbar')) {
+        navLinks.classList.remove('active');
+        mobileMenuToggle.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>
